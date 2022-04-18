@@ -5,6 +5,9 @@
 ; enable copilot in programming modes
 (add-hook 'prog-mode-hook 'copilot-mode)
 
+;; Evil
+;; (customize-set-variable 'copilot-enable-predicates '(evil-insert-state-p))
+
 ; complete by copilot first, then company-mode
 (defun my-tab ()
   (interactive)
