@@ -11,7 +11,7 @@
         ((basedbook)
          (
           (font "scientifica-17")
-          (theme firebelly)
+          (theme gruvbox-dark-soft)
           ))
         ((saturn europa neptune)
          (

@@ -5,10 +5,12 @@
 
 (load-script "hostname-config.el")
 (load-script "theme.el")
-
+(load-script "keybinds.el")
 (load-script "backups.el")
 
 (load-script "org-conf.el")
+
+(load-script "languages.el")
 
 ;; Tab width
 (setq indent-tabs-mode nil)
@@ -29,11 +31,6 @@
 
 ;; Copilot and company mode
 (load-script "copilot-company.el")
-
-;; Javascript mode
-(straight-use-package 'js2-mode)
-(add-hook 'js-mode-hook 'js2-minor-mode)
-(setq js-indent-level tab-width)
 
 ;; Use 100% of window space
 (setq frame-resize-pixelwise t)
