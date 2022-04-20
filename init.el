@@ -34,3 +34,9 @@
 (straight-use-package 'js2-mode)
 (add-hook 'js-mode-hook 'js2-minor-mode)
 (setq js-indent-level tab-width)
+
+;; Use 100% of window space
+(setq frame-resize-pixelwise t)
+
+;; Don't create lockfiles
+(setq create-lockfiles nil)
