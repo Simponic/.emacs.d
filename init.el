@@ -5,11 +5,15 @@
 
 (load-script "hostname-config.el")
 (load-script "theme.el")
-(load-script "modeline.el")
 
 (load-script "backups.el")
 
 (load-script "org-conf.el")
+
+;; Tab width
+(setq indent-tabs-mode nil)
+(setq tab-width 2)
+(setq indent-line-function 'insert-tab)
 
 ;; Slime
 (straight-use-package 'slime)
@@ -25,3 +29,8 @@
 
 ;; Copilot and company mode
 (load-script "copilot-company.el")
+
+;; Javascript mode
+(straight-use-package 'js2-mode)
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(setq js-indent-level tab-width)

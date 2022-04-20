@@ -1,26 +1,29 @@
 (setq *hostname-regexs*
       '(
-	(".*BasedBook"  basedbook) ;; Mac Air m1
-	(  ".*neptune"  neptune)   ;; Desktop ubuntu
-	(   ".*saturn"  saturn)    ;; Thinkpad arch
-	(   ".*europa"  europa)    ;; Desktop artix
-       ))
+        (".*BasedBook"  basedbook) ;; Mac Air m1
+        (  ".*neptune"  neptune)   ;; Desktop ubuntu
+        (   ".*saturn"  saturn)    ;; Thinkpad arch
+        (   ".*europa"  europa)    ;; Desktop artix
+        ))
 
 (setq *machine-configs*
       '(
- 	((basedbook)
+        ((basedbook)
          (
-	  (font "scientifica-17")
-	  ))
-	((saturn europa neptune)
-	 (
-	  (font "Fira-Code 14")
-	  ))
-	((default)
-	 (
-	  (font "Menlo 16")
-	  ))
-	))
+          (font "scientifica-17")
+          (theme firebelly)
+          ))
+        ((saturn europa neptune)
+         (
+          (font "scientifica-14")
+          (theme spolsky)
+          ))
+        ((default)
+         (
+          (font "Menlo 16")
+          (theme gruvbox-light-medium)
+          ))
+        ))
 
 (defun find-machine-symbol (hostname names-alist)
   (cond

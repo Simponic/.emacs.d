@@ -1,8 +1,10 @@
 ;; Use firebelly theme
 (straight-use-package
  '(firebelly-theme :type git :host github :repo "startling/firebelly"))
-(require 'firebelly-theme)
-(load-theme 'firebelly t)
+(straight-use-package 'sublime-themes)
+(straight-use-package 'gruvbox-theme)
+
+(load-theme (get-machine-config 'theme) t)
 
 ;; Tab configuration
 (setq default-tab-width 2)
@@ -33,3 +35,13 @@
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Modeline
+(straight-use-package 'telephone-line)
+(require 'telephone-line)
+(setq telephone-line-primary-left-separator 'telephone-line-cubed-left
+      telephone-line-secondary-left-separator 'telephone-line-cubed-hollow-left
+      telephone-line-primary-right-separator 'telephone-line-cubed-right
+      telephone-line-secondary-right-separator 'telephone-line-cubed-hollow-right)
+(setq telephone-line-height 24
+      telephone-line-evil-use-short-tag t)
+(telephone-line-mode 1)

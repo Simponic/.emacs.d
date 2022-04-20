@@ -1,1 +1,12 @@
 straight
+games
+session*
+auto-save-list/
+eln-cache/
+elpa/
+snippets/
+.lsp-session*
+*~
+*#
+recentf
+.dap-breakpoints
