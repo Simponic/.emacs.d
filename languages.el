@@ -6,3 +6,5 @@
 ;; Elixir mode
 (straight-use-package 'elixir-mode)
 
+;; Svelte mode
+(straight-use-package 'svelte-mode)
