@@ -15,7 +15,7 @@
           ))
         ((saturn europa neptune)
          (
-          (font "scientifica-14")
+          (font "Fira Code-14")
           (theme spolsky)
           ))
         ((default)
