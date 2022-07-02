@@ -37,3 +37,6 @@
 
 ;; Don't create lockfiles
 (setq create-lockfiles nil)
+
+(setq evil-normal-state-cursor '(hbar . 1))
+(setq evil-insert-state-cursor '(hbar . 1))

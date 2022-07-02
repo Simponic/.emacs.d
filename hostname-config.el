@@ -8,12 +8,12 @@
 
 (setq *machine-configs*
       '(
-        ((basedbook)
+        ((basedbook europa)
          (
-          (font "scientifica-17")
-          (theme gruvbox-dark-soft)
+          (font "PT Mono-14")
+          (theme gruvbox-light-medium)
           ))
-        ((saturn europa neptune)
+        ((saturn neptune)
          (
           (font "Fira Code-14")
           (theme spolsky)
@@ -21,15 +21,14 @@
         ((default)
          (
           (font "Menlo 16")
-          (theme gruvbox-light-medium)
+          (theme gruvbox-dark-soft)
           ))
         ))
 
 (defun find-machine-symbol (hostname names-alist)
   (cond
    ((eq nil names-alist) 'default)
-   (t (let* (
-             (curr (car names-alist))
+   (t (let* ((curr (car names-alist))
              (hostname-regex (car curr))
              (hostname-symbol (cadr curr)))
         (if (string-match hostname-regex hostname)
@@ -39,8 +38,7 @@
 (defun find-machine-config (machine-symbol configs)
   (cond
    ((eq nil configs) nil)
-   (t (let* (
-             (curr (car configs))
+   (t (let* ((curr (car configs))
              (machines (car curr))
              (config (cadr curr)))
         (if (member machine-symbol machines)
