@@ -15,8 +15,8 @@
           ))
         ((saturn neptune)
          (
-          (font "Fira Code-14")
-          (theme spolsky)
+          (font "Scientifica-14")
+          (theme gruvbox-light-medium)
           ))
         ((default)
          (
