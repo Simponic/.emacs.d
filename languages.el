@@ -8,3 +8,8 @@
 
 ;; Svelte mode
 (straight-use-package 'svelte-mode)
+
+;; Web mode
+(straight-use-package 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))

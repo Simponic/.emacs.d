@@ -8,3 +8,9 @@
 
 ;; Presentation mode - for streams and whatnot
 (global-set-key (kbd "C-x p") (lambda () (interactive) (set-face-attribute 'default nil :height 165)))
+
+
+;; Tree view
+(straight-use-package 'neotree)
+(require 'neotree)
+(global-set-key (kbd "C-c j") 'neotree-toggle)
